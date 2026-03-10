@@ -36,3 +36,24 @@ function typeEffect() {
 }
 
 typeEffect();
+
+document.querySelectorAll(".nav-links a").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const section = document.querySelector(this.getAttribute("href"));
+    section.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
