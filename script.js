@@ -57,3 +57,8 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+document.querySelector(".glow-btn").addEventListener("click", () => {
+  document.querySelector("#projects").scrollIntoView({
+    behavior: "smooth"
+  });
+});
