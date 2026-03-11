@@ -205,5 +205,89 @@ footer {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+.skill-card {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #006064, #00838f, #00acc1, #26c6da);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#home h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#home button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #006064;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home button:hover {
+  transform: scale(1.05);
+}
+.glow-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #00bcd4, #26c6da);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,188,212,0.6);
+}
+
+/* Hover glow effect */
+.glow-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 
+    0 0 10px #00bcd4,
+    0 0 20px #00bcd4,
+    0 0 40px #26c6da;
+}
+
+    
