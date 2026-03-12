@@ -289,5 +289,73 @@ footer {
     0 0 20px #00bcd4,
     0 0 40px #26c6da;
 }
+.skill {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 10px;
+  width: 0;
+  background: #00bcd4;
+  transition: width 1.5s ease;
+}
+
+/* Skill levels */
+.html { width: 90%; }
+.css { width: 85%; }
+.js { width: 70%; }
+.github { width: 75%; }
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #006064;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #00bcd4;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  margin: 15% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-btn {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
 
     
