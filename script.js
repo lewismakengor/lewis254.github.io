@@ -62,3 +62,59 @@ document.querySelector(".glow-btn").addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+const skillSection = document.querySelector("#skills");
+const progressBars = document.querySelectorAll(".progress");
+
+const skillObserver = new IntersectionObserver(entries => {
+
+  if(entries[0].isIntersecting){
+
+    progressBars.forEach(bar => {
+      const width = bar.classList.contains("html") ? "90%" :
+                    bar.classList.contains("css") ? "85%" :
+                    bar.classList.contains("js") ? "70%" :
+                    "75%";
+
+      bar.style.width = width;
+    });
+
+  }
+
+}, {threshold:0.4});
+
+skillObserver.observe(skillSection);
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const filter = button.getAttribute("data-filter");
+
+    projectCards.forEach(card => {
+
+      if(filter === "all" || card.getAttribute("data-category") === filter){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+function openModal() {
+  document.getElementById("project-modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("project-modal").style.display = "none";
+}function openModal() {
+  document.getElementById("project-modal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("project-modal").style.display = "none";
+}
