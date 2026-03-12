@@ -49,17 +49,7 @@
 <p>I am learning software engineering and building modern responsive websites.</p>
 </section>
 
-<section id="skills">
-<h2>My Skills</h2>
 
-<div class="skills-container">
-<div class="skill-card">HTML</div>
-<div class="skill-card">CSS</div>
-<div class="skill-card">GitHub</div>
-<div class="skill-card">Responsive Design</div>
-</div>
-
-</section>
 
 <section id="projects">
 
@@ -67,20 +57,39 @@
 
 <div class="projects-container">
 
-<div class="project-card">
-<img src="https://via.placeholder.com/400x200" alt="Project Preview">
+<section id="projects">
 
-<div class="project-content">
-<h3>My First Website</h3>
-<p>A personal website built with HTML and CSS.</p>
-<a href="https://lewis254.github.io" target="_blank">View Live</a>
+<h2>My Projects</h2>
+
+<div class="filter-buttons">
+  <button data-filter="all">All</button>
+  <button data-filter="web">Web</button>
+  <button data-filter="app">App</button>
+</div>
+
+<div class="projects-container">
+
+<div class="project-card" data-category="web">
+<h3>Portfolio Website</h3>
+<p>My personal portfolio built with HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project-card" data-category="app">
+<h3>StudySmart App</h3>
+<p>A learning assistant web app.</p>
+</div>
+
+<div class="project-card" data-category="web">
+<h3>Business Landing Page</h3>
+<p>A responsive website for a business.</p>
 </div>
 
 </div>
 
+</section><div class="project-card" onclick="openModal()">
+  <h3>My First Website</h3>
+  <p>A personal website built with HTML and CSS.</p>
 </div>
-
-</section>
 
 <section id="contact">
 <h2>Contact Me</h2>
@@ -92,6 +101,21 @@
 </footer>
 
 <script src="script.js"></script>
+<div id="project-modal" class="modal">
 
+  <div class="modal-content">
+
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2>My First Website</h2>
+    <p>This project is a responsive personal website built using HTML, CSS and JavaScript.</p>
+
+    <a href="https://lewis254.github.io" target="_blank">View Live</a>
+    <br><br>
+    <a href="https://github.com/lewis254" target="_blank">View Code</a>
+
+  </div>
+
+</div>
 </body>
-</html>
+    
