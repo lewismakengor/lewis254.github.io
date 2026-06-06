@@ -9,63 +9,69 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
 <meta name="description" content="Personal portfolio of Lewis Makengo, aspiring software engineer and basketball athlete from Migori, Kenya.">
-<meta name="keywords" content="Software Engineer Kenya, Web Developer Nairobi, Lewis Makengo Portfolio">
+
+<meta name="keywords" content="Software Engineer Kenya, Web Developer in Migori, Lewis Makengo Portfolio">
+
 <meta name="author" content="Lewis Makengo">
-    <meta name="google-site-verification" content="8NDgh-TPtdOFNOFAfEl9Fp9tDvmPmvd7GGEFwW2rPI8" />
+
+<meta name="google-site-verification" content="8NDgh-TPtdOFNOFAfEl9Fp9tDvmPmvd7GGEFwW2rPI8" />
+
 </head>
 
 <body>
 
 <header>
+
 <nav class="navbar">
 
-<h2>Lewis</h2>
+<h2 class="logo">Lewis Makengo</h2>
 
 <ul class="nav-links" id="nav-links">
 <li><a href="#home">Home</a></li>
-<span><a href="#about">About</a></span>
+<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
 <div id="hamburger" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+<span></span>
+<span></span>
+<span></span>
 </div>
 
 </nav>
-</header>
 
+</header>
+<canvas id="ai-background"></canvas>
 <section id="home">
 <h1>Hello, I'm Lewis Makengo 👋</h1>
+
 <p><span id="typing-text"></span></p>
+
 <button class="glow-btn">View My Work</button>
 </section>
 
 <section id="about">
 <h2>About Me</h2>
-<p>I am learning software engineering and building modern responsive websites.</p>
+<img src="images/myphoto01.jpg" alt="Lewis Makengo" class="profile-img">
+<p>
+I am learning software engineering and building modern responsive websites.
+</p>
 </section>
-
-
-
-<section id="projects">
-
-<h2>My Projects</h2>
-
-<div class="projects-container">
 
 <section id="projects">
 
 <h2>My Projects</h2>
 
 <div class="filter-buttons">
-  <button data-filter="all">All</button>
-  <button data-filter="web">Web</button>
-  <button data-filter="app">App</button>
+<button data-filter="all">All</button>
+<button data-filter="web">Web</button>
+<button data-filter="app">App</button>
 </div>
 
 <div class="projects-container">
@@ -85,44 +91,64 @@
 <p>A responsive website for a business.</p>
 </div>
 
+<div class="project-card" onclick="openModal()">
+<h2>My First Website</h2>
+<p>A personal website built with HTML and CSS.</p>
 </div>
 
-</section><div class="project-card" onclick="openModal()">
-  <h3>My First Website</h3>
-  <p>A personal website built with HTML and CSS.</p>
 </div>
-    <section class="cta-buttons">
-  <a href="#contact" class="button">Hire Me</a>
-  <a href="#services" class="button">View My Services</a>
-    </section>
-    
+
+</section>
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skill">
+<p>HTML, CSS & JavaScript</p>
+<div class="bar">
+<span style="width:90%"></span>
+</div>
+</div>
+
+</section>
 
 <section id="contact">
 <h2>Contact Me</h2>
-<p>Email: lewismakengor@gmail.com 
-0706424785</p>
+
+<p>
+Email: lewismakengor@gmail.com
+<br>
+Phone: +254706424785
+</p>
 </section>
 
 <footer>
 <p>© 2026 Lewis Makengo</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Modal -->
 <div id="project-modal" class="modal">
 
-  <div class="modal-content">
+<div class="modal-content">
 
-    <span class="close-btn" onclick="closeModal()">&times;</span>
+<span class="close-btn" onclick="closeModal()">&times;</span>
 
-    <h2>My First Website</h2>
-    <p>This project is a responsive personal website built using HTML, CSS and JavaScript.</p>
+<h2>My First Website</h2>
 
-    <a href="https://lewis254.github.io" target="_blank">View Live</a>
-    <br><br>
-    <a href="https://github.com/lewis254" target="_blank">View Code</a>
+<p>
+This project is a responsive personal website built using HTML, CSS and JavaScript.
+</p>
 
-  </div>
+
+
+
+
+
 
 </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
-    
