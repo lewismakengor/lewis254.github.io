@@ -72,33 +72,187 @@ body{
 }
 
 /* =========================
-   HAMBURGER
+   FUTURISTIC HAMBURGER MENU
 ========================= */
 
 .hamburger{
     display:none;
     flex-direction:column;
-    gap:5px;
+    justify-content:center;
+    gap:6px;
     cursor:pointer;
+
+    width:50px;
+    height:50px;
+
+    border:1px solid rgba(0,255,255,0.3);
+    border-radius:12px;
+
+    background:rgba(0,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+      0 0 10px rgba(0,255,255,0.3),
+      inset 0 0 10px rgba(0,255,255,0.1);
+
+    transition:0.4s;
 }
+
+/* Hover Glow Effect */
+
+.hamburger:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+      0 0 10px cyan,
+      0 0 20px cyan,
+      0 0 40px cyan;
+}
+
+/* Hamburger Lines */
 
 .hamburger span{
-    width:25px;
+    width:26px;
     height:3px;
-    background:white;
-    transition:0.3s;
+
+    background:cyan;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    box-shadow:
+      0 0 5px cyan,
+      0 0 10px cyan;
+
+    transition:0.4s ease;
 }
 
+/* Transform Hamburger Into X */
+
 .hamburger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,5px);
+    transform:
+      translateY(9px)
+      rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2){
     opacity:0;
+    transform:scale(0);
 }
 
 .hamburger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(6px,-6px);
+    transform:
+      translateY(-9px)
+      rotate(-45deg);
+}
+
+/* =========================
+   AI PULSE GLOW EFFECT
+========================= */
+
+@keyframes pulseGlow{
+
+    0%{
+        box-shadow:
+          0 0 10px cyan;
+    }
+
+    50%{
+        box-shadow:
+          0 0 20px cyan,
+          0 0 40px cyan;
+    }
+
+    100%{
+        box-shadow:
+          0 0 10px cyan;
+    }
+
+}
+
+/* Apply Pulse Animation */
+
+.hamburger{
+    animation:pulseGlow 6s infinite;
+}
+
+/* =========================
+   FUTURISTIC DROPDOWN MENU
+========================= */
+
+.nav-links{
+    display:none;
+
+    flex-direction:column;
+
+    position:absolute;
+
+    top:75px;
+    right:10px;
+
+    width:220px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(0,10,30,0.9);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,255,255,0.3);
+
+    box-shadow:
+      0 0 20px rgba(0,255,255,0.3);
+
+    gap:15px;
+}
+
+/* Show Menu When Active */
+
+.nav-links.active{
+    display:flex;
+}
+
+/* Menu Links */
+
+.nav-links a{
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+/* Link Hover Effect */
+
+.nav-links a:hover{
+
+    background:rgba(0,255,255,0.1);
+
+    color:cyan;
+
+    box-shadow:
+      0 0 10px cyan;
+
+}
+
+/* =========================
+   MOBILE ONLY
+========================= */
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
 }
 
 /* =========================
@@ -298,37 +452,4 @@ footer{
     background:rgba(0,0,0,0.5);
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-    .hamburger{
-        display:flex;
-    }
-
-    .nav-links{
-        display:none;
-        flex-direction:column;
-        position:absolute;
-        top:70px;
-        right:10px;
-        background:#111;
-        padding:20px;
-        border-radius:10px;
-        width:200px;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    #home h1{
-        font-size:2rem;
-    }
-
-    .projects-container{
-        grid-template-columns:1fr;
-    }
-}
+   
